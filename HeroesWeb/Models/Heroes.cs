@@ -15,14 +15,11 @@ public partial class Heroes
     public string Nombre { get; set; } = null!;
 
     [StringLength(100)]
-    public string? NombreReal { get; set; }
+    public string? IdentidadSecreta { get; set; }
 
     [StringLength(50)]
-    public string? Universo { get; set; }
+    public string? Ciudad { get; set; }
 
-    public int? SuperPoderId { get; set; }
-
-    [ForeignKey("SuperPoderId")]
-    [InverseProperty("Heroes")]
-    public virtual SuperPoderes? SuperPoder { get; set; }
+    [InverseProperty("Heroe")]
+    public virtual ICollection<SuperPoderes> SuperPoderes { get; set; } = new List<SuperPoderes>();
 }

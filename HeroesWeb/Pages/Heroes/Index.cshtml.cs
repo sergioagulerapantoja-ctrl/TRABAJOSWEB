@@ -23,8 +23,7 @@ namespace HeroesWeb.Pages_Heroes
 
         public async Task OnGetAsync()
         {
-            Heroes = await _context.Heroes
-                .Include(h => h.SuperPoder).ToListAsync();
+            Heroes = await _context.Heroes.ToListAsync();
         }
     }
 }

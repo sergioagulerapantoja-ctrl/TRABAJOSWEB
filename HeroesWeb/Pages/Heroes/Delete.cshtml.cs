@@ -29,9 +29,7 @@ namespace HeroesWeb.Pages_Heroes
                 return NotFound();
             }
 
-            var heroes = await _context.Heroes
-                .Include(h => h.SuperPoder)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var heroes = await _context.Heroes.FirstOrDefaultAsync(m => m.Id == id);
 
             if (heroes is not null)
             {

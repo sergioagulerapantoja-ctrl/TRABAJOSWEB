@@ -17,13 +17,10 @@
                 @Html.DisplayNameFor(model => model.Heroes[0].Nombre)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Heroes[0].NombreReal)
+                @Html.DisplayNameFor(model => model.Heroes[0].IdentidadSecreta)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Heroes[0].Universo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Heroes[0].SuperPoder)
+                @Html.DisplayNameFor(model => model.Heroes[0].Ciudad)
             </th>
             <th></th>
         </tr>
@@ -35,13 +32,10 @@
                 @Html.DisplayFor(modelItem => item.Nombre)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.NombreReal)
+                @Html.DisplayFor(modelItem => item.IdentidadSecreta)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Universo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SuperPoder!.Nombre)
+                @Html.DisplayFor(modelItem => item.Ciudad)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |

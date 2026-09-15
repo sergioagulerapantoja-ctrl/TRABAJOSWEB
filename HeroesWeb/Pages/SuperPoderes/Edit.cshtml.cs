@@ -36,6 +36,7 @@ namespace HeroesWeb.Pages_SuperPoderes
                 return NotFound();
             }
             SuperPoderes = superpoderes;
+            ViewData["HeroeId"] = new SelectList(_context.Heroes, "Id", "Nombre", SuperPoderes.HeroeId);
             return Page();
         }
 
@@ -43,8 +44,11 @@ namespace HeroesWeb.Pages_SuperPoderes
         // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
+            ModelState.Remove("SuperPoderes.Heroe");
+
             if (!ModelState.IsValid)
             {
+                ViewData["HeroeId"] = new SelectList(_context.Heroes, "Id", "Nombre", SuperPoderes.HeroeId);
                 return Page();
             }
 

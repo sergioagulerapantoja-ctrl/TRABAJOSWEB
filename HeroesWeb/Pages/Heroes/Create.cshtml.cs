@@ -21,7 +21,6 @@ namespace HeroesWeb.Pages_Heroes
 
         public IActionResult OnGet()
         {
-        ViewData["SuperPoderId"] = new SelectList(_context.SuperPoderes, "Id", "Id");
             return Page();
         }
 

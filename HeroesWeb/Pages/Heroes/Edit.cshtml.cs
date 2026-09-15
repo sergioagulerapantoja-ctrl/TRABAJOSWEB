@@ -36,7 +36,6 @@ namespace HeroesWeb.Pages_Heroes
                 return NotFound();
             }
             Heroes = heroes;
-           ViewData["SuperPoderId"] = new SelectList(_context.SuperPoderes, "Id", "Id");
             return Page();
         }
 

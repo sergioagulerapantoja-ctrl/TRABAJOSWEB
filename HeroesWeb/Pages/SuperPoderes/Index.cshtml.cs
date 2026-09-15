@@ -23,7 +23,8 @@ namespace HeroesWeb.Pages_SuperPoderes
 
         public async Task OnGetAsync()
         {
-            SuperPoderes = await _context.SuperPoderes.ToListAsync();
+            SuperPoderes = await _context.SuperPoderes
+                .Include(s => s.Heroe).ToListAsync();
         }
     }
 }

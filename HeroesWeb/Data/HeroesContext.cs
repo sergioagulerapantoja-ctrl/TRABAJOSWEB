@@ -18,9 +18,11 @@ public partial class HeroesContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Heroes>(entity =>
+        modelBuilder.Entity<SuperPoderes>(entity =>
         {
-            entity.HasOne(d => d.SuperPoder).WithMany(p => p.Heroes).HasConstraintName("FK_Heroes_SuperPoderes");
+            entity.HasOne(d => d.Heroe).WithMany(p => p.SuperPoderes)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_SuperPoderes_Heroes");
         });
 
         OnModelCreatingPartial(modelBuilder);

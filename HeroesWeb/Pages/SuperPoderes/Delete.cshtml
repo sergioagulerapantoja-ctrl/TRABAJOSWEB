@@ -24,6 +24,12 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.SuperPoderes.Descripcion)
         </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SuperPoderes.Heroe)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SuperPoderes.Heroe.Nombre)
+        </dd>
     </dl>
     
     <form method="post">

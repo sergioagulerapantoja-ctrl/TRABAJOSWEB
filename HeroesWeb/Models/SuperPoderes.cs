@@ -17,6 +17,9 @@ public partial class SuperPoderes
     [StringLength(500)]
     public string? Descripcion { get; set; }
 
-    [InverseProperty("SuperPoder")]
-    public virtual ICollection<Heroes> Heroes { get; set; } = new List<Heroes>();
+    public int HeroeId { get; set; }
+
+    [ForeignKey("HeroeId")]
+    [InverseProperty("SuperPoderes")]
+    public virtual Heroes Heroe { get; set; } = null!;
 }
