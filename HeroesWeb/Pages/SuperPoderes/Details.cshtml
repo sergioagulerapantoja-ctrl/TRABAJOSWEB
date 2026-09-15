@@ -2,13 +2,13 @@
 @model HeroesWeb.Pages_SuperPoderes.DetailsModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalles del superpoder";
 }
 
-<h1>Details</h1>
+<h1>Detalles del superpoder</h1>
 
 <div>
-    <h4>SuperPoderes</h4>
+    <h4>Superpoder</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -32,6 +32,6 @@
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.SuperPoderes.Id">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Edit" asp-route-id="@Model.SuperPoderes.Id">Editar</a> |
+    <a asp-page="./Index">Volver a la lista</a>
 </div>

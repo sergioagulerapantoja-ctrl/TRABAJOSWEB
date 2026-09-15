@@ -2,12 +2,12 @@
 @model HeroesWeb.Pages_SuperPoderes.CreateModel
 
         @{
-        ViewData["Title"] = "Create";
+        ViewData["Title"] = "Crear superpoder";
         }
         
-        <h1>Create</h1>
+        <h1>Crear superpoder</h1>
         
-    <h4>SuperPoderes</h4>
+    <h4>Superpoder</h4>
     <hr />
     <div class="row">
     <div class="col-md-4">
@@ -28,14 +28,14 @@
                 <select asp-for="SuperPoderes.HeroeId" class ="form-control" asp-items="ViewBag.HeroeId" ></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Crear" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="Index">Volver a la lista</a>
 </div>
 
 @section Scripts {
