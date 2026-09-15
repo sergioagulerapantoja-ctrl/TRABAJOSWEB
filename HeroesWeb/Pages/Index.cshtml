@@ -1,0 +1,14 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="text-center">
+    <h1 class="display-4">HeroesWeb</h1>
+    <p class="lead">Administración de héroes y superpoderes.</p>
+    <div class="d-flex justify-content-center gap-2">
+        <a class="btn btn-primary" asp-page="/Heroes/Index">Gestionar héroes</a>
+        <a class="btn btn-outline-primary" asp-page="/SuperPoderes/Index">Gestionar superpoderes</a>
+    </div>
+</div>
